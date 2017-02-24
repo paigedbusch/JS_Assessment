@@ -86,7 +86,7 @@ function Unicorn(hornColor, magicType, mana, canFly) {
 /////15 from mana on the unicorn until it hits zero.
 Unicorn.prototype.castBubbleWrapSpell = function() {
     bubbles += 100;
-  while (this.mana > 0) {
+  if (this.mana >= 0) {
     this.mana -= 15;
   }
 }
